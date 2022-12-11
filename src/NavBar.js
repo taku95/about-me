@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import {
   AppBar,
   Toolbar,
@@ -12,10 +13,9 @@ import HubIcon from "@mui/icons-material/Hub";
 
 import DrawerComp from "./DrawerComp";
 
-const PAGES = ["About me", "Works", "Contact"];
+const PAGES = ["about", "Works", "Contact"];
 function NavBar() {
   const [value, setValue] = useState(0);
-  const [view, setview] = useState("about");
   const theme = useTheme();
   const isMatch = useMediaQuery(theme.breakpoints.down("md"));
   return (
